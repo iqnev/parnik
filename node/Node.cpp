@@ -21,8 +21,9 @@
 //============================================================================
 #include "Node.h"
 
-Node::Node(uint8_t _soilPin) {
+Node::Node(uint8_t _soilPin, uint8_t _dhtPin) {
 	soilPin = _soilPin;
+	dhtPin = _dhtPin;
 }
 
 uint16_t Node:: readSoilHumidity() {
@@ -55,8 +56,15 @@ uint16_t Node:: readSoilHumidity() {
 	return outputValue;
 }
 
+struct Node::dht_data Node::readDHT() {
+	Node::dht_data d;
 
-//..... hidden
+	d.humidity = 56.5;
+	d.temperature = 34.4;
+
+	return d;
+}
+
 
 
 

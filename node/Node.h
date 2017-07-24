@@ -35,24 +35,26 @@
 #define TO_LOW 0
 #define TO_HIGH 100
 
-	//..... hidden
-
 class Node {
 
 private:
 	int soilValuel;
 	uint8_t soilPin;
-	
-	//..... hidden
+	uint8_t dhtPin;
+	//struct dht_data;
 
 public:
-
+	struct dht_data {
+		float humidity;
+		float temperature;
+		float heatIndex;
+	};
 	/**
 	 * The default constructor with parameters.
 	 *
 	 * @param soilPin The pin for Soil Moisture Sensor.
 	 */
-	Node(uint8_t soilPin);
+	Node(uint8_t soilPin, uint8_t dhtPin);
 
 	/**
 	 * Read  soil humanidity from soild sensor. The possible values that can
@@ -62,8 +64,11 @@ public:
 	 * MAX Value: 100 - water
 	 **/
 	uint16_t readSoilHumidity();
-	
-	//..... hidden
+
+	/**
+	 *
+	 */
+	struct dht_data readDHT();
 
 };
 
