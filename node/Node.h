@@ -28,12 +28,14 @@
 //TODO
 #endif
 
-#include <stdint.h>
+#include <DHT.h>
 
 #define FROM_LOW 1023
 #define FROM_HIGH 114
 #define TO_LOW 0
 #define TO_HIGH 100
+
+#define DHTTYPE DHT11
 
 class Node {
 
@@ -41,7 +43,6 @@ private:
 	int soilValuel;
 	uint8_t soilPin;
 	uint8_t dhtPin;
-	//struct dht_data;
 
 public:
 	struct dht_data {
@@ -66,7 +67,7 @@ public:
 	uint16_t readSoilHumidity();
 
 	/**
-	 *
+	 * Read combination data of temperature, humidity and Heat index as a struct.
 	 */
 	struct dht_data readDHT();
 
