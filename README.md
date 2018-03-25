@@ -26,7 +26,7 @@ The Smart Greenhouse System is consist of several modules:
 4. Cloud analyzing, remote monitoring and remote control.
 
 
-![Common architecture](https://github.com/iqnev/smart-farm/blob/master/wiki/smart_farm_common_architecture.png)
+![Common architecture](https://github.com/iqnev/parnik/blob/master/wiki/smart_farm_common_architecture.png)
   
 	
 Тhе above the scheme is common presentation with individual blocks.	
